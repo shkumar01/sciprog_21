@@ -9,7 +9,7 @@ int main(void) {
    char binnum[60];
 
 /* Intialise 4-byte integer */
-   inum = 33554431;
+   inum = 42;
 /* Convert to 4-byte float */
    fnum = (float) inum;
 
@@ -17,6 +17,8 @@ int main(void) {
 /* Convert to binary number (string)*/
    i = 0; tmp = inum;
    while (tmp > 0) {
+//   To see what's going on at each iteration
+//   printf("tmp=%d | digit=%1d\n",tmp,tmp%2);
      sprintf(&binnum[i],"%1d",tmp%2);
      tmp = tmp/2;
      i++;
@@ -24,12 +26,11 @@ int main(void) {
 
 /* Terminate the string */
    binnum[i] = '\0';
-       
+
 
 /* Complete the expression */
-/* numdigits = ceil( ... );
+   numdigits = ceil(logf(fnum)/logf(2.0));
    printf("The number of digits is %d\n",numdigits);
-*/
 
 
    printf("inum=%d,  fnum=%f, inum in binary=%s\n",
