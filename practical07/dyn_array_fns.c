@@ -1,3 +1,8 @@
+/*******************************************************
+ *                 Week 7 practical
+ *      Exercises with functions using dynamic arrays
+********************************************************/
+
 #include <stdio.h>
 #include <stdlib.h>
 
